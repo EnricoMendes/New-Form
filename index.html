@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+  <meta charset="UTF-8">
+  <title>Formulário de Briefing</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/0e677000fc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Etapa 1: Email -->
+  <div class="step active" id="step-1">
+    <div class="Title">
+      <span class="iconEmail"><i class="fa-regular fa-envelope-open"></i></span>
+      <h1>Crie seu Site Personalizado</h1>
+      <p>Escolha entre diferentes modelos para cada seção do seu site</p>
+    </div>
+    <label class="labelForm">Seu endereço de email</label>
+    <form onsubmit="return false;">
+      <input type="email" id="email" class="form-control" placeholder="Seu e-mail" required>
+      <button class="btn btn-Next btn-Email" type="submit" onclick="nextStep()">Próximo <i
+          class="fa-solid fa-arrow-right"></i></button>
+    </form>
+  </div>
+
+  <!-- Etapa 2: Topo -->
+  <div class="step" id="step-2">
+    <h2>Topo do site</h2>
+    <p>Escolha o modelo do cabeçalho do seu site</p>
+    <div class="options">
+      <label class="labelOption"><input type="radio" name="topo" value="topo1"><span>Opção 1</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214200/Topo_10_x8wyr2.png" alt="Topo 1"></label>
+      <label class="labelOption"><input type="radio" name="topo" value="topo2"><span>Opção 2</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214199/Topo_4_mrexly.png" alt="Topo 2"></label>
+      <label class="labelOption"><input type="radio" name="topo" value="topo3"><span>Opção 3</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214199/Topo_9_i7coq3.png" alt="Topo 3"></label>
+      <label class="labelOption"><input type="radio" name="topo" value="topo4"><span>Opção 4</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214198/Topo_7_b3hkxz.png" alt="Topo 4"></label>
+      <label class="labelOption"><input type="radio" name="topo" value="topo5"><span>Opção 5</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214198/Topo_8_t81p3o.png" alt="Topo 5"></label>
+      <label class="labelOption"><input type="radio" name="topo" value="topo6"><span>Opção 6</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214197/Topo_6_ulv4hy.png" alt="Topo 6"></label>
+      <label class="labelOption"><input type="radio" name="topo" value="topo7"><span>Opção 7</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214197/Topo_5_xfu2ll.png" alt="Topo 7"></label>
+      <label class="labelOption"><input type="radio" name="topo" value="topo8"><span>Opção 8</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214197/Topo_3_eb0jzs.png" alt="Topo 8"></label>
+      <label class="labelOption"><input type="radio" name="topo" value="topo9"><span>Opção 9</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214195/Topo_2_vsfpom.png" alt="Topo 9"></label>
+      <label class="labelOption"><input type="radio" name="topo" value="topo10"><span>Opção 10</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214195/Topo_1_rfsfpk.png" alt="Topo 10"></label>
+      <label class="labelOption none"><input type="radio" name="topo" value="nenhum"><span>Nenhum</span></label>
+    </div>
+    <form class="formText">
+      <textarea required id="comentario-topo" class="form-control"
+        placeholder="Comente sobre sua escolha..."></textarea>
+    </form>
+    <form class="formFile">
+      <span class="labelForm">Ou escolha envie uma opção da sua preferência</span>
+      <label for="meuArquivo" class="custom-file-upload">
+        📁 Escolher arquivo
+      </label>
+      <input type="file" id="meuArquivo" name="meuArquivo" multiple>
+      <span id="file-name">Nenhum arquivo selecionado</span>
+    </form>
+    <div class="btnGroup">
+      <button class="btn btn-Next" type="submit" onclick="nextStep()">Próximo <i
+          class="fa-solid fa-arrow-right"></i></button>
+      <button class="btn btn-Prev" onclick="prevStep()">Anterior <i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+  </div>
+
+  <!-- Etapa 3: Banner -->
+  <div class="step" id="step-3">
+    <h2>Escolha o modelo da busca do banner</h2>
+    <div class="options">
+      <label class="labelOption"><input type="radio" name="banner" value="banner1"><span>Opção 1</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213940/Busca_2_p5ter2.png" alt="Banner 1"></label>
+      <label class="labelOption"><input type="radio" name="banner" value="banner2"><span>Opção 2</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213940/Busca_4_gwy43f.png" alt="Banner 2"></label>
+      <label class="labelOption"><input type="radio" name="banner" value="banner3"><span>Opção 3</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213941/Busca_5_djomhl.png" alt="Banner 3"></label>
+      <label class="labelOption"><input type="radio" name="banner" value="banner4"><span>Opção 4</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213941/Busca_7_kxs0gq.png" alt="Banner 4"></label>
+      <label class="labelOption"><input type="radio" name="banner" value="banner5"><span>Opção 5</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213941/Busca_3_kukjqu.png" alt="Banner 5"></label>
+      <label class="labelOption"><input type="radio" name="banner" value="banner6"><span>Opção 6</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213942/Busca_1_l483yr.png" alt="Banner 6"></label>
+      <label class="labelOption"><input type="radio" name="banner" value="banner7"><span>Opção 7</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213943/Busca_10_dktkd8.png"
+          alt="Banner 7"></label>
+      <label class="labelOption"><input type="radio" name="banner" value="banner8"><span>Opção 8</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213944/Busca_9_ih1844.png" alt="Banner 8"></label>
+      <label class="labelOption"><input type="radio" name="banner" value="banner9"><span>Opção 9</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213948/Busca_6_rvsg4v.png" alt="Banner 9"></label>
+      <label class="labelOption"><input type="radio" name="banner" value="banner10"><span>Opção 10</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213963/Busca_8_k7s4nd.png"
+          alt="Banner 10"></label>
+      <label class="labelOption none"><input type="radio" name="banner" value="nenhum"><span>Nenhum</span></label>
+    </div>
+    <form class="formText">
+      <textarea required id="comentario-topo" class="form-control"
+        placeholder="Comente sobre sua escolha..."></textarea>
+    </form>
+    <form class="formFile">
+      <span class="labelForm">Ou escolha envie uma opção da sua preferência</span>
+      <label for="meuArquivo" class="custom-file-upload">
+        📁 Escolher arquivo
+      </label>
+      <input type="file" id="meuArquivo" name="meuArquivo" multiple>
+      <span id="file-name">Nenhum arquivo selecionado</span>
+    </form>
+    <div class="btnGroup">
+      <button class="btn btn-Next" onclick="nextStep()">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+      <button class="btn btn-Prev" onclick="prevStep()">Anterior <i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+  </div>
+
+  <!-- Etapa 4: Card de imóvel -->
+  <div class="step" id="step-4">
+    <h2>Escolha o modelo de card de imóvel</h2>
+    <div class="options">
+      <label class="labelOption"><input type="radio" name="cards" value="cards1"><span>Opção 1</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213996/Card_1_fnn643.png" alt="Card 1"></label>
+      <label class="labelOption"><input type="radio" name="cards" value="cards2"><span>Opção 2</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213996/Card_5_oxfays.png" alt="Card 2"></label>
+      <label class="labelOption"><input type="radio" name="cards" value="cards3"><span>Opção 3</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213995/Card_3_k7uufo.png" alt="Card 3"></label>
+      <label class="labelOption"><input type="radio" name="cards" value="cards4"><span>Opção 4</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213996/Card_4_jejydg.png" alt="Card 4"></label>
+      <label class="labelOption"><input type="radio" name="cards" value="cards5"><span>Opção 5</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213996/Card_2_bq1h7f.png" alt="Card 5"></label>
+      <label class="labelOption"><input type="radio" name="cards" value="cards6"><span>Opção 6</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213998/Card_7_svrvxq.png" alt="Card 6"></label>
+      <label class="labelOption"><input type="radio" name="cards" value="cards7"><span>Opção 7</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753213999/Card_6_rhmmml.png" alt="Card 7"></label>
+      <label class="labelOption"><input type="radio" name="cards" value="cards8"><span>Opção 8</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214000/Card_8_hgrgk7.png" alt="Card 8"></label>
+      <label class="labelOption"><input type="radio" name="cards" value="cards9"><span>Opção 9</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214005/Card_9_bi4wae.png" alt="Card 9"></label>
+      <label class="labelOption none"><input type="radio" name="cards" value="nenhum"><span>Nenhum</span></label>
+    </div>
+    <form class="formText">
+      <textarea required id="comentario-topo" class="form-control"
+        placeholder="Comente sobre sua escolha..."></textarea>
+    </form>
+    <form class="formFile">
+      <span class="labelForm">Ou escolha envie uma opção da sua preferência</span>
+      <label for="meuArquivo" class="custom-file-upload">
+        📁 Escolher arquivo
+      </label>
+      <input type="file" id="meuArquivo" name="meuArquivo" multiple>
+      <span id="file-name">Nenhum arquivo selecionado</span>
+    </form>
+    <div class="btnGroup">
+      <button class="btn btn-Next" onclick="nextStep()">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+      <button class="btn btn-Prev" onclick="prevStep()">Anterior <i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+  </div>
+
+  <!-- Etapa 5: Lista de links -->
+  <div class="step" id="step-5">
+    <h2>Escolha o modelo da Lista de links</h2>
+    <div class="options">
+      <label class="labelOption"><input type="radio" name="lista" value="lista1"><span>Opção 1</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214084/Lista_1_igx2yt.png" alt="Lista 1"></label>
+      <label class="labelOption"><input type="radio" name="lista" value="lista2"><span>Opção 2</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214085/Lista_3_k9sqfe.png" alt="Lista 2"></label>
+      <label class="labelOption"><input type="radio" name="lista" value="lista3"><span>Opção 3</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214089/Lista_7_h44pft.png" alt="Lista 3"></label>
+      <label class="labelOption"><input type="radio" name="lista" value="lista4"><span>Opção 4</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214091/Lista_8_uir9yk.png" alt="Lista 4"></label>
+      <label class="labelOption"><input type="radio" name="lista" value="lista5"><span>Opção 5</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214093/Lista_5_owwabr.png" alt="Lista 5"></label>
+      <label class="labelOption"><input type="radio" name="lista" value="lista6"><span>Opção 6</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214094/Lista_4_f5l0sm.png" alt="Lista 6"></label>
+      <label class="labelOption"><input type="radio" name="lista" value="lista7"><span>Opção 7</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214095/Lista_2_hklbpx.png" alt="Lista 7"></label>
+      <label class="labelOption"><input type="radio" name="lista" value="lista8"><span>Opção 8</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214096/Lista_6_kbwckf.png" alt="Lista 8"></label>
+      <label class="labelOption"><input type="radio" name="lista" value="lista9"><span>Opção 9</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214098/Lista_10_davexp.png" alt="Lista 9"></label>
+      <label class="labelOption"><input type="radio" name="lista" value="lista10"><span>Opção 10</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214098/Lista_11_i9t4ga.png"
+          alt="Lista 10"></label>
+      <label class="labelOption"><input type="radio" name="lista" value="lista11"><span>Opção 11</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214102/Lista_9_m4sag7.png" alt="Lista 11"></label>
+      <label class="labelOption none"><input type="radio" name="lista" value="nenhum"><span>Nenhum</span></label>
+    </div>
+    <form class="formText">
+      <textarea required id="comentario-topo" class="form-control"
+        placeholder="Comente sobre sua escolha..."></textarea>
+    </form>
+    <form class="formFile">
+      <span class="labelForm">Ou escolha envie uma opção da sua preferência</span>
+      <label for="meuArquivo" class="custom-file-upload">
+        📁 Escolher arquivo
+      </label>
+      <input type="file" id="meuArquivo" name="meuArquivo" multiple>
+      <span id="file-name">Nenhum arquivo selecionado</span>
+    </form>
+    <div class="btnGroup">
+      <button class="btn btn-Next" onclick="nextStep()">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+      <button class="btn btn-Prev" onclick="prevStep()">Anterior <i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+  </div>
+
+  <!-- Etapa 6: Destaque -->
+  <div class="step" id="step-6">
+    <h2>Escolha o modelo de destaque de imóveis</h2>
+    <div class="options">
+      <label class="labelOption"><input type="radio" name="destaque" value="destaque1"><span>Opção 1</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214037/Destaque_6_ulu7y4.png"
+          alt="Destaque 1"></label>
+      <label class="labelOption"><input type="radio" name="destaque" value="destaque2"><span>Opção 2</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214037/Destaque_4_t4i2us.png"
+          alt="Destaque 2"></label>
+      <label class="labelOption"><input type="radio" name="destaque" value="destaque3"><span>Opção 3</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214037/Destaque_3_i1hni7.png"
+          alt="Destaque 3"></label>
+      <label class="labelOption"><input type="radio" name="destaque" value="destaque4"><span>Opção 4</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214041/Destaque_2_jocxg0.png"
+          alt="Destaque 4"></label>
+      <label class="labelOption"><input type="radio" name="destaque" value="destaque5"><span>Opção 5</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214042/Destaque_1_ykjrnq.png"
+          alt="Destaque 5"></label>
+      <label class="labelOption"><input type="radio" name="destaque" value="destaque6"><span>Opção 6</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214042/Destaque_5_mrncp7.png"
+          alt="Destaque 6"></label>
+      <label class="labelOption none"><input type="radio" name="destaque" value="nenhum"><span>Nenhum</span></label>
+    </div>
+    <form class="formText">
+      <textarea required id="comentario-topo" class="form-control"
+        placeholder="Comente sobre sua escolha..."></textarea>
+    </form>
+    <form class="formFile">
+      <span class="labelForm">Ou escolha envie uma opção da sua preferência</span>
+      <label for="meuArquivo" class="custom-file-upload">
+        📁 Escolher arquivo
+      </label>
+      <input type="file" id="meuArquivo" name="meuArquivo" multiple>
+      <span id="file-name">Nenhum arquivo selecionado</span>
+    </form>
+    <div class="btnGroup">
+      <button class="btn btn-Next" onclick="nextStep()">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+      <button class="btn btn-Prev" onclick="prevStep()">Anterior <i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+  </div>
+
+  <!-- Etapa 7: Rodapé -->
+  <div class="step" id="step-7">
+    <h2>Escolha o modelo de rodapé</h2>
+    <div class="options">
+      <label class="labelOption"><input type="radio" name="rodape" value="rodape1"><span>Opção 1</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214163/Rodape_2_fedezj.png"
+          alt="Rodapé 1"></label>
+      <label class="labelOption"><input type="radio" name="rodape" value="rodape2"><span>Opção 2</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214162/Rodape_3_wlnsnz.png"
+          alt="Rodapé 2"></label>
+      <label class="labelOption"><input type="radio" name="rodape" value="rodape3"><span>Opção 3</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214162/Rodape_1_xiqt1g.png"
+          alt="Rodapé 3"></label>
+      <label class="labelOption"><input type="radio" name="rodape" value="rodape4"><span>Opção 4</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214166/Rodape_4_qkv7lr.png"
+          alt="Rodapé 4"></label>
+      <label class="labelOption"><input type="radio" name="rodape" value="rodape5"><span>Opção 5</span><img
+          src="https://res.cloudinary.com/dyytc1zpm/image/upload/v1753214163/Rodape_5_i6gprq.png"
+          alt="Rodapé 5"></label>
+      <label class="labelOption none"><input type="radio" name="nenhum" value="nenhum"><span>Nenhum</span></label>
+    </div>
+    <form class="formText">
+      <textarea required id="comentario-topo" class="form-control"
+        placeholder="Comente sobre sua escolha..."></textarea>
+    </form>
+    <form class="formFile">
+      <span class="labelForm">Ou escolha envie uma opção da sua preferência</span>
+      <label for="meuArquivo" class="custom-file-upload">
+        📁 Escolher arquivo
+      </label>
+      <input type="file" id="meuArquivo" name="meuArquivo" multiple>
+      <span id="file-name">Nenhum arquivo selecionado</span>
+    </form>
+    <div class="btnGroup">
+      <button class="btn btn-Next" onclick="nextStep()">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+      <button class="btn btn-Prev" onclick="prevStep()">Anterior <i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+  </div>
+
+  <!-- Etapa 8: Resumo -->
+  <div class="step" id="step-8">
+    <h2>Resumo</h2>
+    <div id="resumo"></div>
+    <div class="btnGroup">
+      <button class="btn btn-Pdf" onclick="gerarPDF()">Gerar PDF <i class="fa-regular fa-file"></i></button>
+      <button class="btn btn-Prev" onclick="prevStep()">Anterior <i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+  </div>
+
+  <!-- Libs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

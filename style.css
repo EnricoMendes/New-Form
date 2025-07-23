@@ -1,0 +1,323 @@
+body {
+  padding: 48px;
+  background: linear-gradient(180deg, #e0e7ff, #eff6ff);
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 100vh;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.step {
+  display: none;
+  background: white;
+  padding: 36px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px 2px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: auto;
+}
+
+#step-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 32rem;
+  width: 100%;
+}
+
+#step-1 form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#step-2 .options img {
+  height: auto;
+}
+
+#step-3 .options img {
+  max-height: 350px;
+  object-fit: contain;
+}
+
+#step-4 .options label {
+  width: auto;
+  flex: 1;
+  min-width: 48%;
+  max-width: 100%;
+}
+
+.step:not(.active) {
+  display: none !important;
+}
+
+.step.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.step #resumo img {
+  width: 100%;
+}
+
+.step .Title h1 {
+  text-align: center;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin: 16px 0 0 0;
+  color: #32404D
+}
+
+.step h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin: 0;
+  color: #32404D;
+  margin-bottom: 16px;
+}
+
+.step p {
+  line-height: 1.4;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin: 16px 0;
+}
+
+.step .Title p {
+  line-height: 1.4;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin: 16px 0;
+}
+
+.step .Title .iconEmail {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #dde4ec;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.step .Title .iconEmail i {
+  font-size: 24px;
+  color: #286f85;
+}
+
+.step .labelForm {
+  font-size: 14px;
+  line-height: 1.2;
+  color: black;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  margin: 0 0 8px 0;
+}
+
+.step input {
+  border-radius: 12px;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  height: auto;
+  padding: 14px 16px;
+  display: block;
+  width: auto;
+  flex: 1;
+  line-height: 1;
+}
+
+.options {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.options label {
+  cursor: pointer;
+  width: 100%;
+}
+
+.options label span {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+  display: block;
+}
+
+.options img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.labelOption input[type="radio"]:checked+span+img {
+  border: 3px solid #3B71A5;
+  box-shadow: 0 0 8px 0px #3B71A5
+  /* Borda azul quando selecionado */
+}
+
+.options input:checked+img {
+  border-color: #3B71A5;
+}
+
+.options label.labelOption:not(.none) input[type="radio"] {
+  display: none;
+}
+
+.options label.labelOption.none {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.options label.labelOption.none input {
+  margin: 0;
+  padding: 0;
+  max-width: max-content;
+  cursor: pointer
+}
+
+.options label.labelOption.none span {
+  margin: 0 0 0 4px !important;
+}
+
+textarea {
+  width: 100%;
+  min-height: 80px;
+  margin-top: 16px;
+  padding: 14px 16px;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+
+.form-control {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  line-height: 1;
+  border-radius: 12px;
+  font-family: 'Montserrat';
+}
+
+form.formFile {
+  margin-top: 16px;
+}
+
+form.formFile label {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+  display: block;
+}
+
+form.formFile br {
+  display: none;
+}
+
+form.formFile #file-name{
+  color: #3B71A5;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+form.formFile span.labelForm {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+  display: block;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  background-color: #DDE4EC;
+  color: #4D5055;
+  padding: 14px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 16px;
+  user-select: none;
+}
+
+.custom-file-upload:hover {
+  background-color: #dde4ec80;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#file-name {
+  font-size: 14px;
+  color: #555;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+button.btn {
+  display: flex;
+  gap: 8px;
+  height: auto;
+  padding: 14px 18px;
+  background: #3b71a5;
+  width: max-content;
+  color: white;
+  border: none;
+  margin: 24px 0 0 0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  transition: all .3s ease;
+}
+
+button.btn.btn-Prev {
+  flex-direction: row-reverse;
+}
+
+button.btn.btn-Prev {
+  background: rgba(107, 114, 128, 0.3);
+  color: rgba(107, 114, 128, 1);
+  ;
+}
+
+button.btn-Email {
+  width: 100%;
+  margin: 24px 0 0 0;
+}
+
+button.btn:hover {
+  transform: scale(1.03);
+}
