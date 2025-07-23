@@ -170,7 +170,7 @@ body {
 .labelOption input[type="radio"]:checked+span+img {
   border: 3px solid #3B71A5;
   box-shadow: 0 0 8px 0px #3B71A5
-  /* Borda azul quando selecionado */
+    /* Borda azul quando selecionado */
 }
 
 .options input:checked+img {
@@ -234,7 +234,7 @@ form.formFile br {
   display: none;
 }
 
-form.formFile #file-name{
+form.formFile #file-name {
   color: #3B71A5;
   font-size: 12px;
   font-weight: 500;
@@ -320,4 +320,67 @@ button.btn-Email {
 
 button.btn:hover {
   transform: scale(1.03);
+}
+
+/* Modo dark */
+body.dark {
+  background: #0a131d;
+}
+button.dark-mode-toggle {
+  height: 46px;
+  width: 46px;
+  background-color: #0a131d;
+  border-radius: 8px;
+  color: white;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+button.dark-mode-toggle i{
+  font-size: 18px;
+}
+button.dark-mode-toggle.light{
+  background-color: #dde4ec;
+  color: #3b71a5;
+}
+button.dark-mode-toggle:hover{
+  transform: scale(1.05);
+}
+body.dark .step {
+  background: #1d354d;
+  color: white;
+}
+body.dark .step h2{
+  color: white;
+}
+body.dark .step p{
+  color: white;
+}
+body.dark .step .options .labelOption span {
+  color: white;
+}
+body.dark .step .formFile span{
+  color: white;
+}
+body.dark .step .formFile span#file-name{
+  color: white;
+}
+body.dark .step .Title h1{
+  color: white;
+}
+body.dark .step .Title p{
+  color: white;
+}
+body.dark .step label.labelForm{
+  color: white;
+}
+body.dark .labelOption input[type="radio"]:checked+span+img {
+  border: 3px solid #DDE4EC;
+  box-shadow: 0 0 8px 0px #DDE4EC;
+}
+body.dark button.btn.btn-Prev{
+  color: white;
 }
