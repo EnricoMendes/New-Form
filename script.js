@@ -179,8 +179,15 @@ async function gerarPDF() {
 }
 
 const btn = document.getElementById('dark-mode-toggle');
+const icon = btn.querySelector('i');
 
 btn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   btn.classList.toggle('light');
+
+  if (btn.classList.contains('light')) {
+    icon.className = 'far fa-sun';
+  } else {
+    icon.className = 'far fa-moon';
+  }
 });
