@@ -47,7 +47,7 @@ body {
 #step-4 .options label {
   width: auto;
   flex: 1;
-  min-width: 48%;
+  min-width: 32%;
   max-width: 100%;
 }
 
