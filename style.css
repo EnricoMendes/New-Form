@@ -29,6 +29,21 @@ body {
   width: 100%;
 }
 
+#step-1 div.disclaimer {
+  padding: 16px;
+  background-color: #dde4ec;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+#step-1 div.disclaimer p {
+  color: black;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 500;
+  font-style: italic;
+}
+
 #step-1 form {
   display: flex;
   flex-direction: column;
@@ -326,6 +341,7 @@ button.btn:hover {
 body.dark {
   background: #0a131d;
 }
+
 button.dark-mode-toggle {
   height: 46px;
   width: 46px;
@@ -339,48 +355,62 @@ button.dark-mode-toggle {
   border: none;
   transition: all 0.3s ease;
 }
-button.dark-mode-toggle i{
+
+button.dark-mode-toggle i {
   font-size: 18px;
 }
-button.dark-mode-toggle.light{
+
+button.dark-mode-toggle.light {
   background-color: #dde4ec;
   color: #3b71a5;
 }
-button.dark-mode-toggle:hover{
+
+button.dark-mode-toggle:hover {
   transform: scale(1.05);
 }
+
 body.dark .step {
   background: #1d354d;
   color: white;
 }
-body.dark .step h2{
+
+body.dark .step h2 {
   color: white;
 }
-body.dark .step p{
+
+body.dark .step p {
   color: white;
 }
+
 body.dark .step .options .labelOption span {
   color: white;
 }
-body.dark .step .formFile span{
+
+body.dark .step .formFile span {
   color: white;
 }
-body.dark .step .formFile span#file-name{
+
+body.dark .step .formFile span#file-name {
   color: white;
 }
-body.dark .step .Title h1{
+
+body.dark .step .Title h1 {
   color: white;
 }
-body.dark .step .Title p{
+
+body.dark .step .Title p {
   color: white;
 }
-body.dark .step label.labelForm{
+
+body.dark .step label.labelForm {
   color: white;
 }
+
 body.dark .labelOption input[type="radio"]:checked+span+img {
   border: 3px solid #DDE4EC;
   box-shadow: 0 0 8px 0px #DDE4EC;
 }
-body.dark button.btn.btn-Prev{
+
+body.dark button.btn.btn-Prev {
   color: white;
 }
